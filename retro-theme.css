@@ -1,0 +1,27 @@
+body {
+	background-color: #ff0066;
+	color: #000;
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+button {
+	background-color: #ff99cc;
+	border: none;
+	color: #000;
+	cursor: pointer;
+	padding: 8px 16px;
+}
+
+button:hover {
+	background-color: #ff66b3;
+}
+
+.editor {
+	border: 1px solid #ff3399;
+	padding: 16px;
+	min-height: 300px;
+	outline: none;
+	resize: vertical;
+}
