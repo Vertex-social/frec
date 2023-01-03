@@ -41,3 +41,14 @@ function alignRight() {
 function alignJustify() {
 	document.execCommand('justifyFull');
 }
+
+// Add the commands you want to include in your CDN below:
+var commands = [toggleBold, toggleItalic, toggleUnderline, clearFormatting, setHeading, toggleOrderedList, toggleUnorderedList, alignLeft, alignCenter, alignRight, alignJustify];
+
+// Generate the script file for your CDN:
+var script = "";
+for (var i = 0; i < commands.length; i++) {
+	script += commands[i].toString() + "\n\n";
+}
+
+console.log(script);
