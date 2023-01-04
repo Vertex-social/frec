@@ -25,3 +25,9 @@ button:hover {
 	outline: none;
 	resize: vertical;
 }
+#textarea1 {
+  background-color: #F5F5F5;
+  color: #333;
+  font-family: 'Courier New', sans-serif;
+  font-size: 16px;
+}
