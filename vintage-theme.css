@@ -25,3 +25,11 @@ button:hover {
 	outline: none;
 	resize: vertical;
 }
+#textarea1 {
+  background-color: #FFFFFF;
+  color: #333;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+
