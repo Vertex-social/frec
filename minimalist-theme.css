@@ -18,9 +18,9 @@ button:hover {
 	background-color: #eee;
 }
 
-.editor {
-	border: 1px solid #ccc;
-	padding: 16px;
-	min-height: 300px;
-	outline: none;
-	resize: vertical
+#textarea1 {
+  background-color: #EDEDED;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
