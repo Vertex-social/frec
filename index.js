@@ -1,54 +1,58 @@
-function toggleBold() {
-	document.execCommand('bold');
+function bold() {
+  document.getElementById("textarea1").style.fontWeight = "bold";
 }
 
-function toggleItalic() {
-	document.execCommand('italic');
-}
-
-function toggleUnderline() {
-	document.execCommand('underline');
-}
-
-function clearFormatting() {
-	document.execCommand('removeFormat');
-}
-
-function setHeading(heading) {
-	document.execCommand('formatBlock', false, heading);
-}
-
-function toggleOrderedList() {
-	document.execCommand('insertOrderedList');
-}
-
-function toggleUnorderedList() {
-	document.execCommand('insertUnorderedList');
+function italic() {
+  document.getElementById("textarea1").style.fontStyle = "italic";
 }
 
 function alignLeft() {
-	document.execCommand('justifyLeft');
+  document.getElementById("textarea1").style.textAlign = "left";
 }
 
 function alignCenter() {
-	document.execCommand('justifyCenter');
+  document.getElementById("textarea1").style.textAlign = "center";
 }
 
 function alignRight() {
-	document.execCommand('justifyRight');
+  document.getElementById("textarea1").style.textAlign = "right";
 }
 
-function alignJustify() {
-	document.execCommand('justifyFull');
+function uppercase() {
+  document.getElementById("textarea1").style.textTransform = "uppercase";
 }
 
-// Add the commands you want to include in your CDN below:
-var commands = [toggleBold, toggleItalic, toggleUnderline, clearFormatting, setHeading, toggleOrderedList, toggleUnorderedList, alignLeft, alignCenter, alignRight, alignJustify];
-
-// Generate the script file for your CDN:
-var script = "";
-for (var i = 0; i < commands.length; i++) {
-	script += commands[i].toString() + "\n\n";
+function lowercase() {
+  document.getElementById("textarea1").style.textTransform = "lowercase";
 }
 
-console.log(script);
+function capitalize() {
+  document.getElementById("textarea1").style.textTransform = "capitalize";
+}
+
+function clearFormatting() {
+  document.getElementById("textarea1").style.fontWeight = "normal";
+  document.getElementById("textarea1").style.textAlign = "left";
+  document.getElementById("textarea1").style.fontStyle = "normal";
+  document.getElementById("textarea1").style.textTransform = "capitalize";
+  document.getElementById("textarea1").value = " ";
+}
+
+function insertImage(url) {
+  document.execCommand('insertImage', false, url);
+}
+
+function createLink(url) {
+  document.execCommand('createLink', false, url);
+}
+
+function saveAsTextFile() {
+  const content = document.getElementById("textarea1").value;
+  var save = document.createElement("a");
+  save.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURI(content));
+  save.setAttribute("download", content.slice(0, 17) + ".txt");
+
+  document.body.appendChild(save);
+  save.click();
+  document.body.removeChild(save);
+}
